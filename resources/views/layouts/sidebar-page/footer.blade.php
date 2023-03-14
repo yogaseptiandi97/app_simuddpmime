@@ -14,7 +14,8 @@
             <li class="menu-item"><a href="https://devs.keenthemes.com" target="_blank" class="menu-link px-2">Support</a></li>
             <li class="menu-item"><a href="https://1.envato.market/EA4JP" target="_blank" class="menu-link px-2">Purchase</a></li>
         </ul>
-        <!--end::Menu-->        </div>
+        <!--end::Menu-->
+    </div>
     <!--end::Footer container-->
 </div>
 <!--end::Footer-->

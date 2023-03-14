@@ -10,7 +10,10 @@ class Layout extends Component
 {
     public string $title;
     public ?string $subtitle;
-    public $vendor_css, $vendor_js, $custom_css, $custom_js = null;
+    public ?string $vendorCSS = null;
+    public ?string $vendorJS = null;
+    public ?string $customCSS = null;
+    public ?string $customJS = null;
 
     /**
      * Create a new component instance.
@@ -26,6 +29,6 @@ class Layout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('template.layout');
+        return view('layouts.sidebar-page.app');
     }
 }

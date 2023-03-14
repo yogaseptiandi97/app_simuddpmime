@@ -25,51 +25,55 @@ class SidebarMenus extends Component
             'MENU UTAMA' => [
                 'Dashboard' => [
                     'icon' => 'fonticon-stats',
-                    'url' => 'dashboard'
+                    'url' => route('dashboard')
+                ],
+                'Donor Darah' => [
+                    'icon' => 'fonticon-stats',
+                    'url' => route('donor-darah')
                 ],
             ],
             'BAGIAN AFTAP' => [
                 'Pendonor' => [
                     'icon' => 'fonticon-stats',
-                    'url' => 'pendonor'
+                    'url' => '#'
                 ],
                 'Penyadapan' => [
                     'icon' => 'fonticon-stats',
-                    'url' => 'penyadapan'
+                    'url' => '#'
+                ],
+                'Kantong Darah' => [
+                    'icon' => 'fonticon-stats',
+                    'url' => '#'
                 ],
             ],
             'BAGIAN LABORATORIUM' => [
                 'Uji Saring IMLTD' => [
                     'icon' => 'fonticon-stats',
-                    'url' => 'uji-saring-imltd'
-                ],
-                'Kantong Darah' => [
-                    'icon' => 'fonticon-stats',
-                    'url' => 'kantong-darah'
+                    'url' => '#'
                 ],
                 'Produksi Darah' => [
                     'icon' => 'fonticon-stats',
-                    'url' => 'produksi-darah'
+                    'url' => '#'
                 ],
                 'Pemusnahan Darah' => [
                     'icon' => 'fonticon-stats',
-                    'url' => 'pemusnahan-darah'
+                    'url' => '#'
                 ],
             ],
             'BAGIAN ADMINISTRASI' => [
                 'Kepegawaian' => [
                     'icon' => 'fonticon-stats',
-                    'url' => 'kepegawaian'
+                    'url' => route('pegawai')
                 ],
                 'Surat Masuk & Surat Keluar' => [
                     'icon' => 'fonticon-stats',
-                    'url' => 'surat-masuk-keluar'
+                    'url' => '#'
                 ],
             ],
             'BAGIAN ADMINISTRATOR' => [
                 'Registrasi Akun' => [
                     'icon' => 'fonticon-stats',
-                    'url' => 'registrasi-akun'
+                    'url' => route('registrasi-akun')
                 ],
             ]
         ];

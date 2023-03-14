@@ -1,4 +1,4 @@
-<x-layout title="Data Registrasi Akun">
+<x-layout title="Data Pegawai">
     @slot('vendorCSS')
         <link href="{{ asset('assets/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css"/>
     @endslot
@@ -8,7 +8,7 @@
     @endslot
 
     @slot('customJS')
-        <script src="{{ asset('assets/custom/registrasi-akun/datatable.js') }}"></script>
+        <script src="{{ asset('assets/custom/pegawai/datatable.js') }}"></script>
     @endslot
 
     <!--begin::Card-->
@@ -38,7 +38,7 @@
         <!--begin::Card body-->
         <div class="card-body py-4">
             <!--begin::Table-->
-            @include('registrasi-akun._datatable')
+            @include('pegawai._datatable')
             <!--end::Table-->
         </div>
         <!--end::Card body-->

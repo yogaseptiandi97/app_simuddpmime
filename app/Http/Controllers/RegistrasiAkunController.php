@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreRegistrasiAkunRequest;
 use App\Models\RegistrasiAkun;
 use App\Models\User;
 use Exception;
@@ -29,14 +30,13 @@ class RegistrasiAkunController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreRegistrasiAkunRequest $request)
     {
         try {
             User::create($request->validated());
-
-            return redirect()->route('registrasi.create')->with('success','Akun Baru berhasil ditambahkan.');
+            return redirect()->route('registrasi-akun.create')->with('success','Akun berhasil ditambahkan.');
         } catch (Exception $e) {
-            return redirect()->route('donor-darah.create')->with('error', 'Akun Baru gagal ditambahkan.');
+            return redirect()->route('registrasi-akun.create')->with('error', $e->getMessage());
         }
     }
 

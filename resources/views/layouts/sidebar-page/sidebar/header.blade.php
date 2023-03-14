@@ -5,18 +5,15 @@
         <!--begin::User-->
         <div class="">
             <!--begin::User info-->
-            <div class="d-flex align-items-center" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-overflow="true" data-kt-menu-placement="top-start">
-                <div class="d-flex flex-center cursor-pointer symbol symbol-custom symbol-40px">
-                    <img src="assets/media/avatars/300-2.jpg" alt="image"/>
-                </div>
+            <div class="d-flex align-items-center">
                 <!--begin::Username-->
-                <a href="#" class="text-white text-hover-primary fs-4 fw-bold ms-3">Eugenia</a>
+                <span class="text-white fs-4 fw-bold ms-3">{{ Auth::user()->nama ?? '' }}</span>
                 <!--end::Username-->
             </div>
             <!--end::User info-->
         </div>
         <!--end::User-->
-        <!--begin::Filter-->
+        <!--begin::Logout-->
         <button class="btn btn-custom btn-icon w-25px h-25px" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" data-kt-menu-overflow="true">
             <!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
             <span class="svg-icon svg-icon-6">
@@ -26,8 +23,7 @@
             </span>
             <!--end::Svg Icon-->
         </button>
-        <!--layout-partial:partials/menus/_menu-1.html-->
-        <!--end::Filter-->
+        <!--end::Logout-->
     </div>
     <!--end::Brand-->
 </div><!--end::Header-->

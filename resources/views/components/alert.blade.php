@@ -9,6 +9,6 @@
     </span>
     <!--end::Svg Icon-->
     <div class="d-flex flex-column">
-        <h5 class="mb-0 text-{{ $typeColorClass }}">{{ $message }}</h5>
+        <h5 class="mb-0 fw-normal text-{{ $typeColorClass }}">{{ $message }}</h5>
     </div>
 </div>

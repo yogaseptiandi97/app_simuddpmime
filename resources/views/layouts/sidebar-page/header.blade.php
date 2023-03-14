@@ -15,14 +15,16 @@
                 <!--end::Svg Icon-->
             </div>
             <!--begin::Logo image-->
-            <a href="?page=index"> <img alt="Logo" src="assets/media/logos/demo36.svg" class="h-30px theme-light-show"/>
-                <img alt="Logo" src="assets/media/logos/demo36.svg" class="h-30px theme-dark-show"/> </a>
+            <a href="#">
+                <img alt="Logo" src="{{ asset('assets/media/logos/demo36.svg') }}" class="h-30px theme-light-show"/>
+                <img alt="Logo" src="{{ asset('assets/media/logos/demo36.svg') }}" class="h-30px theme-dark-show"/>
+            </a>
             <!--end::Logo image-->
         </div>
         <!--end::Sidebar toggle-->
         <!--begin::Header wrapper-->
         <div class="d-flex flex-stack flex-lg-row-fluid" id="kt_app_header_wrapper">
-            @include('template.page-title')
+            @include('layouts.sidebar-page.page-title')
             <!--begin::Action
             <a href="#" class="btn btn-primary d-flex flex-center h-35px h-lg-40px" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign"> Create
                 <span class="d-none d-sm-inline ps-2">New</span>
@@ -32,4 +34,5 @@
         <!--end::Header wrapper-->
     </div>
     <!--end::Header container-->
-</div><!--end::Header-->
+</div>
+<!--end::Header-->

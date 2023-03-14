@@ -8,12 +8,15 @@ use Illuminate\View\Component;
 
 class LayoutSingle extends Component
 {
+    public string $title;
+    public ?string $subtitle;
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($title, $subtitle = null)
     {
-        //
+        $this->title = $title;
+        $this->subtitle = $subtitle;
     }
 
     /**
@@ -21,6 +24,6 @@ class LayoutSingle extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('template.layout-single');
+        return view('layouts.single-page.app');
     }
 }

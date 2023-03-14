@@ -4,10 +4,13 @@
     <!--begin::Table row-->
     <tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
         <th class="w-10px pe-2">#</th>
-        <th class="min-w-150px">Nama Pemilik</th>
-        <th class="min-w-100px">Username</th>
-        <th class="min-w-100px">Role</th>
+        <th class="min-w-125px">Nama Pegawai</th>
+        <th class="min-w-100px">Tanggal Lahir</th>
+        <th class="min-w-100px">Gender</th>
+        <th class="min-w-100px">Masa Kerja</th>
+        <th class="min-w-80px">Bagian</th>
         <th class="min-w-80px">Status</th>
+        <th class="min-w-80px">Aktif</th>
         <th></th>
     </tr>
     <!--end::Table row-->
@@ -17,15 +20,29 @@
     <!--begin::Table body-->
     <tbody class="text-gray-600 fw-semibold">
     @inject('carbon', 'Carbon\Carbon')
-    @foreach($users as $u)
+    @foreach($pegawai as $p)
         <tr>
             <td class="fw-bolder">
                 {{ $loop->iteration }}
             </td>
-            <td>{{ $u['nama'] }}</td>
-            <td>{{ $u['username'] }}</td>
-            <td>{!! $u['role']->getHTML() !!}</td>
-            <td>{!! $u['status']->getHTML() !!}</td>
+            <td class="d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ $p['nama'] }}</a>
+                    <span>{{ $p['nik'] }}</span>
+                </div>
+            </td>
+            <td>
+                <h6>{{ $carbon::parse($p['tanggal_lahir'])->age }} thn.</h6>
+                {{ $p['tanggal_lahir'] }}
+            </td>
+            <td>{{ $p['jenis_kelamin']->getText() }}</td>
+            <td>
+                <h6>{{ $carbon::parse($p->tanggal_masuk)->diff($carbon::now())->format('%y thn %m bln.') }}</h6>
+                {{ $p['tanggal_masuk'] }}
+            </td>
+            <td>{{ $p['bagian']->getText() }}</td>
+            <td>{!! $p['status_kepegawaian']->getHTML() !!}</td>
+            <td>{!! $p['masih_bekerja']->getHTML() !!}</td>
             <td class="text-end">
                 <a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
                     Actions

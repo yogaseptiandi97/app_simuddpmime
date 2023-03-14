@@ -1,7 +1,17 @@
-<x-layout title="Registrasi Akun Baru">
+<x-layout title="Pegawai Baru">
     @slot('customJS')
-        <script src="{{ asset('assets/custom/registrasi-akun/inputmask.js') }}"></script>
+        <script src="{{ asset('assets/custom/pegawai/inputmask.js') }}"></script>
     @endslot
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <div class="row">
         <div class="col-lg-2"></div>
@@ -17,13 +27,13 @@
 
     <!--begin::Card-->
     <div class="card card-custom card-shadow mb-5 mb-xl-10">
-        <form id="form_input" method="POST" action="{{ route('registrasi-akun.store') }}" class="validate" autocomplete="off">
+        <form id="form_input" method="POST" action="{{ route('donor-darah.store') }}" autocomplete="off">
             @csrf
             <!--begin::Card header-->
-            <div class="card-header">
+            <div class="card-header sticky-top bg-white">
                 <!--begin::Card title-->
                 <div class="card-title m-0">
-                    <h3 class="fw-bold m-0 text-uppercase">Informasi Akun</h3>
+                    <h3 class="fw-bold m-0 text-uppercase">Informasi Donor Darah</h3>
                 </div>
                 <!--begin::Card title-->
 
@@ -35,7 +45,7 @@
                 </div>
             </div>
             <!--end::Card header-->
-            @include('registrasi-akun._form')
+            @include('donor-darah._form')
         </form>
     </div>
     <!--end::Card-->

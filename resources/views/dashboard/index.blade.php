@@ -1,3 +1,3 @@
 <x-layout title="Dashboard">
-    dksaodkaokdao
+    Dashboard
 </x-layout>
