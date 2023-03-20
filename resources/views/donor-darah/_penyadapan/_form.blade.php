@@ -1,20 +1,6 @@
 <section class="mb-15">
     <h1 class="mb-15">Penyadapan</h1>
 
-    <!--begin::UUID-->
-    <div class="form-group row mb-5" hidden>
-        <label for="penyadapan_id" class="col-sm-4 col-form-label">UUID
-            <span class="text-danger">*</span>
-        </label>
-        <div class="col-sm-8">
-            <input id="penyadapan_id" name="penyadapan_id" type="text" class="form-control form-control-lg @error('penyadapan_id') is-invalid border-danger @enderror" placeholder="Ketik disini..." value="{{ $uuid['penyadapan'] }}" readonly/>
-            @error('penyadapan_id')
-            <div class="text-danger mt-3">{{ $message }}</div>
-            @enderror
-        </div>
-    </div>
-    <!--end::UUID-->
-
     <!--begin::Tanggal Donor-->
     <div class="form-group row mb-5">
         <label for="tanggal_donor" class="col-sm-4 col-form-label">Tanggal Donor
@@ -23,23 +9,7 @@
         <div class="col-sm-8">
             <input id="tanggal_donor" name="tanggal_donor" type="text"
                    class="form-control form-control-lg @error('tanggal_donor') is-invalid border-danger @enderror"
-                   placeholder="Ketik disini..." value="{{ old('tanggal_donor') }}" readonly/>
-            @error('tanggal_donor')
-            <div class="text-danger mt-3">{{ $message }}</div>
-            @enderror
-        </div>
-    </div>
-    <!--end::Tanggal Donor-->
-
-    <!--begin::Tanggal Donor-->
-    <div class="form-group row mb-5">
-        <label for="tanggal_donor" class="col-sm-4 col-form-label">Tanggal Donor
-            <span class="text-danger">*</span>
-        </label>
-        <div class="col-sm-8">
-            <input id="tanggal_donor" name="tanggal_donor" type="text"
-                   class="form-control form-control-lg @error('tanggal_donor') is-invalid border-danger @enderror"
-                   placeholder="Ketik disini..." value="{{ old('tanggal_donor') }}" readonly/>
+                   placeholder="Ketik disini..." value="{{ old('tanggal_donor') }}"/>
             @error('tanggal_donor')
             <div class="text-danger mt-3">{{ $message }}</div>
             @enderror
@@ -76,7 +46,7 @@
         <div class="col-sm-8">
             <input id="berat_badan" name="berat_badan" type="text"
                    class="form-control form-control-lg @error('berat_badan') is-invalid border-danger @enderror"
-                   placeholder="Ketik disini..." value="{{ old('berat_badan') }}" readonly/>
+                   placeholder="Ketik disini..." value="{{ old('berat_badan') }}"/>
             @error('berat_badan')
             <div class="text-danger mt-3">{{ $message }}</div>
             @enderror
@@ -92,7 +62,7 @@
         <div class="col-sm-8">
             <input id="tensi_darah" name="tensi_darah" type="text"
                    class="form-control form-control-lg @error('tensi_darah') is-invalid border-danger @enderror"
-                   placeholder="Ketik disini..." value="{{ old('tensi_darah') }}" readonly/>
+                   placeholder="Ketik disini..." value="{{ old('tensi_darah') }}"/>
             @error('tensi_darah')
             <div class="text-danger mt-3">{{ $message }}</div>
             @enderror
@@ -108,7 +78,7 @@
         <div class="col-sm-8">
             <input id="kadar_hb" name="kadar_hb" type="text"
                    class="form-control form-control-lg @error('kadar_hb') is-invalid border-danger @enderror"
-                   placeholder="Ketik disini..." value="{{ old('kadar_hb') }}" readonly/>
+                   placeholder="Ketik disini..." value="{{ old('kadar_hb') }}"/>
             @error('kadar_hb')
             <div class="text-danger mt-3">{{ $message }}</div>
             @enderror

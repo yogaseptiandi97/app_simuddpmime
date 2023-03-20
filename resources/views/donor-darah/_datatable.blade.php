@@ -19,28 +19,31 @@
     <!--begin::Table body-->
     <tbody class="text-gray-600 fw-semibold">
     @inject('carbon', 'Carbon\Carbon')
-    @foreach($pegawai as $p)
+    @foreach($donorDarah as $d)
         <tr>
             <td class="fw-bolder">
                 {{ $loop->iteration }}
             </td>
             <td class="d-flex align-items-center">
                 <div class="d-flex flex-column">
-                    <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ $p['nama'] }}</a>
-                    <span>{{ $p['nik'] }}</span>
+                    <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ $d['nama'] }}</a>
+                    <span>{{ $d['nik'] }}</span>
                 </div>
             </td>
             <td>
-                <h6>{{ $carbon::parse($p['tanggal_lahir'])->age }} thn.</h6>
-                {{ $p['tanggal_lahir'] }}
+                <h6>{{ $carbon::parse($d['tanggal_lahir'])->age }} thn.</h6>
+                {{ $d['tanggal_lahir'] }}
             </td>
             <td>
-                <h6>{{ $carbon::parse($p->tanggal_donor)->diff($carbon::now())->format('%d hari.') }}</h6>
-                {{ $p['tanggal_donor'] }}
+                <h6>{{ $carbon::parse($d->tanggal_donor)->diff($carbon::now())->format('%d hari.') }}</h6>
+                {{ $d['tanggal_donor'] }}
             </td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>
+                <span class="mr-3">{!! $d['golongan_darah']->getHTML() !!}</span>
+                <span>{!! $d['rhesus']->getHTML() !!}</span>
+            </td>
+            <td>{{ $d['petugas_penyadapan'] }}</td>
+            <td>{{ $d['no_kantong'] }}</td>
             <td class="text-end">
                 <a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
                     Actions

@@ -1,17 +1,7 @@
 <x-layout title="Pegawai Baru">
     @slot('customJS')
-        <script src="{{ asset('assets/custom/pegawai/inputmask.js') }}"></script>
+        <script src="{{ asset('assets/custom/donor-darah/inputmask.js') }}"></script>
     @endslot
-
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
 
     <div class="row">
         <div class="col-lg-2"></div>

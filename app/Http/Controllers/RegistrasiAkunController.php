@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreRegistrasiAkunRequest;
+use App\Http\Requests\RegistrasiAkunRequest;
 use App\Models\RegistrasiAkun;
 use App\Models\User;
 use Exception;
@@ -30,7 +30,7 @@ class RegistrasiAkunController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreRegistrasiAkunRequest $request)
+    public function store(RegistrasiAkunRequest $request)
     {
         try {
             User::create($request->validated());

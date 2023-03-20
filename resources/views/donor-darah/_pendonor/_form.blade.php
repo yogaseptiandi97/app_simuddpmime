@@ -1,19 +1,6 @@
 <section class="mb-15">
     <h1 class="mb-15">Pendonor</h1>
 
-    <!--begin::UUID-->
-    <div class="form-group row mb-5" hidden>
-        <label for="pendonor_id" class="col-sm-4 col-form-label">UUID
-            <span class="text-danger">*</span>
-        </label>
-        <div class="col-sm-8">
-            <input id="pendonor_id" name="pendonor_id" type="text" class="form-control form-control-lg @error('pendonor_id') is-invalid border-danger @enderror" placeholder="Ketik disini..." value="{{ $uuid['pendonor'] }}" readonly/>
-            @error('pendonor_id')
-            <div class="text-danger mt-3">{{ $message }}</div>
-            @enderror
-        </div>
-    </div>
-    <!--end::UUID-->
     <!--begin::Nomor Induk Kependudukan-->
     <div class="form-group row mb-5">
         <label for="nik" class="col-sm-4 col-form-label">Nomor Induk Kependudukan

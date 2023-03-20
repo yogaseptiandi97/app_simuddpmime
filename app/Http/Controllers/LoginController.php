@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreLoginRequest;
+use App\Http\Requests\LoginRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,7 +20,7 @@ class LoginController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreLoginRequest $request)
+    public function store(LoginRequest $request)
     {
         if (Auth::attempt($request->validated())) {
             return redirect()->route(RouteServiceProvider::HOME)->with('success', 'Anda telah berhasil login.');

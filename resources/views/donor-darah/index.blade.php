@@ -38,7 +38,7 @@
         <!--begin::Card body-->
         <div class="card-body py-4">
             <!--begin::Table-->
-
+            @include('donor-darah._datatable')
             <!--end::Table-->
         </div>
         <!--end::Card body-->
